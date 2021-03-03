@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringBootMicrowService1Application {
 
 	public static void main(String[] args) {
+		
 		SpringApplication.run(SpringBootMicrowService1Application.class, args);
 	}
 
