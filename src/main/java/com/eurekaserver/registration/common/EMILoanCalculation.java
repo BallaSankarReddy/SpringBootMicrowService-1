@@ -1,4 +1,4 @@
-package com.eurekaserver.registration;
+package com.eurekaserver.registration.common;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
