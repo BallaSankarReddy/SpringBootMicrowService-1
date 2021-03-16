@@ -38,8 +38,8 @@ public class BrowCalculationServiceImpl implements BrowCalculationService{
 
 	@Override
 	public Account getBrowLoanAccount(Integer accountId) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return account_list.stream().filter(account -> null!=account && account.getAccountId().compareTo(accountId)==0).findFirst().orElse(new Account());
 	}
 
 }

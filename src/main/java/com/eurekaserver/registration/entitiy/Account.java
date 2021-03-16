@@ -5,7 +5,14 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
+//@JsonIgnoreProperties({"Account"})
+
+@JsonInclude(Include.NON_NULL)
 public class Account implements Serializable {
 
 		/**
@@ -27,10 +34,37 @@ public class Account implements Serializable {
 		private BigDecimal dailyInterRate;
 		private Integer paymentid;
 		private BigDecimal payingAmount;
-		//private Payment payment;
-		//private BigDecimal monthilyAmount;
 		private BigDecimal noOfYear;
 		
+		private BigDecimal emiYearInterestAmount;
+		private BigDecimal emiMonthlyInterestAmount;
+		private BigDecimal emiPrincipalAmount;
+		private BigDecimal eMIOutStandingAmount;
+		private BigDecimal serialNumber;
+		private BigDecimal totalMonths;
+		private BigDecimal principal;
+		
+		
+		
+		
+		public BigDecimal getPrincipal() {
+			return principal;
+		}
+		public void setPrincipal(BigDecimal principal) {
+			this.principal = principal;
+		}
+		public BigDecimal getTotalMonths() {
+			return totalMonths;
+		}
+		public void setTotalMonths(BigDecimal totalMonths) {
+			this.totalMonths = totalMonths;
+		}
+		public BigDecimal getSerialNumber() {
+			return serialNumber;
+		}
+		public void setSerialNumber(BigDecimal serialNumber) {
+			this.serialNumber = serialNumber;
+		}
 		public Integer getAccountId() {
 			return accountId;
 		}
@@ -102,5 +136,29 @@ public class Account implements Serializable {
 		}
 		public void setNoOfYear(BigDecimal noOfYear) {
 			this.noOfYear = noOfYear;
+		}
+		public BigDecimal getEmiYearInterestAmount() {
+			return emiYearInterestAmount;
+		}
+		public void setEmiYearInterestAmount(BigDecimal emiYearInterestAmount) {
+			this.emiYearInterestAmount = emiYearInterestAmount;
+		}
+		public BigDecimal getEmiMonthlyInterestAmount() {
+			return emiMonthlyInterestAmount;
+		}
+		public void setEmiMonthlyInterestAmount(BigDecimal emiMonthlyInterestAmount) {
+			this.emiMonthlyInterestAmount = emiMonthlyInterestAmount;
+		}
+		public BigDecimal getEmiPrincipalAmount() {
+			return emiPrincipalAmount;
+		}
+		public void setEmiPrincipalAmount(BigDecimal emiPrincipalAmount) {
+			this.emiPrincipalAmount = emiPrincipalAmount;
+		}
+		public BigDecimal geteMIOutStandingAmount() {
+			return eMIOutStandingAmount;
+		}
+		public void seteMIOutStandingAmount(BigDecimal eMIOutStandingAmount) {
+			this.eMIOutStandingAmount = eMIOutStandingAmount;
 		}
 }
